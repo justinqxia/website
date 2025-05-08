@@ -90,10 +90,10 @@ const activities = activitiesData.activities;
 <script define:vars={{ activities }}>
 	// Get the stored start time or set a new one if it doesn't exist
 	let startTime;
-	const storedTime = localStorage.getItem('websiteStartTime');
+	const storedTime = sessionStorage.getItem('websiteStartTime');
 	if (!storedTime) {
 		startTime = Date.now();
-		localStorage.setItem('websiteStartTime', startTime.toString());
+		sessionStorage.setItem('websiteStartTime', startTime.toString());
 	} else {
 		startTime = parseInt(storedTime);
 	}
@@ -103,8 +103,7 @@ const activities = activitiesData.activities;
 	const nextActivity = document.getElementById('nextActivity');
 	const resetButton = document.getElementById('resetButton');
 
-	// Store the current activity index in localStorage
-	let currentActivityIndex = parseInt(localStorage.getItem('currentActivityIndex') || '0');
+	let currentActivityIndex = parseInt(sessionStorage.getItem('currentActivityIndex') || '0');
 	let isTransitioning = false;
 	
 	function updateTimeCounter() {
@@ -137,7 +136,7 @@ const activities = activitiesData.activities;
 				currentActivity.style.opacity = '1';
 				nextActivity.style.opacity = '0';
 				currentActivityIndex++;
-				localStorage.setItem('currentActivityIndex', currentActivityIndex.toString());
+				sessionStorage.setItem('currentActivityIndex', currentActivityIndex.toString());
 				isTransitioning = false;
 			}, 1000);
 		}

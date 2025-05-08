@@ -1,9 +1,6 @@
 # Justin Xia's Personal Website
 
-My personal website and blog.
-
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/34e13880-8bab-4b57-99d5-78b41c41aaae/deploy-status)](https://app.netlify.com/sites/justinqxia/deploys)
+My personal website and blog. Built with Astro, deployed with Cloudflare Pages.
 
 ## Development
 
