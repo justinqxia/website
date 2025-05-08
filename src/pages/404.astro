@@ -1,12 +1,10 @@
 ---
-const { code } = Astro.params;
-const errorCode = code || 404;
-const catUrl = `https://http.cat/${errorCode}.jpg`;
+const catUrl = 'https://http.cat/404.jpg';
 ---
 
 <html lang="en">
   <head>
-    <title>Error {errorCode}</title>
+    <title>404 Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
@@ -33,8 +31,7 @@ const catUrl = `https://http.cat/${errorCode}.jpg`;
     </style>
   </head>
   <body>
-    <h1>Error {errorCode}</h1>
-    <img src={catUrl} alt={`HTTP Cat for error ${errorCode}`} />
+    <img src={catUrl} alt="HTTP Cat for error 404" />
     <p>Sorry, something went wrong.</p>
     <a href="/" style="color: #fff; text-decoration: underline;">Go Home</a>
   </body>
