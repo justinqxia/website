@@ -14,5 +14,9 @@
     "@astrojs/sitemap": "^3.3.1",
     "astro": "^5.7.10",
     "vanta": "^0.5.24"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.9.5",
+    "@rollup/rollup-darwin-arm64": "^4.9.5"
   }
 }
