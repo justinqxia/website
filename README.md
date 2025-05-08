@@ -1,12 +1,9 @@
 # Justin Xia's Personal Website
 
-My personal website and blog built with Astro.
+My personal website and blog.
 
-## Tech Stack
-
-- [Astro](https://astro.build) - Static Site Generator
-- [MDX](https://mdxjs.com/) - Markdown with JSX support
-- [Netlify](https://www.netlify.com/) - Hosting
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34e13880-8bab-4b57-99d5-78b41c41aaae/deploy-status)](https://app.netlify.com/sites/justinqxia/deploys)
 
 ## Development
 
@@ -35,5 +32,4 @@ All textual and visual content, including but not limited to blog posts, article
 All rights are reserved for this content unless explicitly stated otherwise on a specific piece of content itself or on the website where it is displayed. For usage permissions regarding the content, please refer to the copyright notice on the website or contact me for clarification.
 
 ## Contact
-
 For any questions or inquiries, please reach out through the contact information provided on the website.
