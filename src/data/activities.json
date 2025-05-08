@@ -1,0 +1,24 @@
+{
+    "activities": [
+        {
+            "text": "Nothing",
+            "duration": 0
+        },
+        {
+            "text": "Swim 50 yards",
+            "duration": 22000
+        },
+        {
+            "text": "Solve a Rubik's Cube",
+            "duration": 28000
+        },
+        {
+            "text": "Clear 40 lines in Tetris",
+            "duration": 55000
+        },
+        {
+            "text": "Run a mile",
+            "duration": 345000
+        }
+    ]
+} 
