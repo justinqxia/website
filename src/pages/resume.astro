@@ -1,0 +1,150 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Resume" description="Justin Xia's Resume" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="resume">
+				<h1>Resume</h1>
+				<p>Download a <a class="resume-link" href="/assets/files/Justin_Xia_resume.pdf">PDF version</a>. Click on items to see more details.</p>
+
+				<h2>Education</h2>
+				<details>
+					<summary>M.S. in Computer Science @ Georgia Institute of Technology</summary>
+					<i>Expected Graduation: May 2026</i>
+				</details>
+
+				<details>
+					<summary>B.S. in Computer Science @ Georgia Institute of Technology</summary>
+					<i>Graduated: May 2025</i>
+					<i>GPA: 4.00/4.00</i>
+					<p>Threads: Intelligence and Systems & Architectures</p>
+				</details>
+
+				<h2>Experience</h2>
+				<details>
+					<summary>Software Engineer Intern @ <a href="https://www.up.com/index.htm" target="_blank">Union Pacific</a></summary>
+					<i>May 2024 - Feb 2024</i>
+					<p>• Created a Spring Boot back-end to compile a report of thousands of incoming trucks at 16 intermodal ramps</p>
+					<p>• Converted legacy Wicket-based screens to Angular for a more dynamic and responsive user interface</p>
+					<p>• Integrated feedback from users to enhance functionality, boosting ramp ingating productivity by 20%</p>
+					<p>• Performed data processing to assist in creating a machine vision model to detect people near railroads</p>
+				</details>
+
+				<details>
+					<summary>Software Development Co-op @ <a href="https://datapath.com/" target="_blank">Datapath</a></summary>
+					<i>January 2024 - May 2024</i>
+					<p>• Develop a code linter tool to check the syntax of drivers, intended for both customer and internal use</p>
+					<p>• Write and update drivers for various serial and SNMP devices to connect to customers' monitoring software</p>
+					<p>• Review deliverables and documentation created by other coworkers before they are sent to the client</p>
+				</details>
+
+				<details>
+					<summary>IT Student Assistant @ <a href="https://gtrc.gatech.edu/gtrc/" target="_blank">Georgia Tech Research Corporation</a></summary>
+					<i>May 2023 - December 2023</i>
+					<p>• Utilized scripts to streamline the process of setting up devices, reducing the time to set up by 50%</p>
+					<p>• Troubleshot network devices, ensuring that they were accessible for all employees and functioned properly</p>
+					<p>• Resolved tickets for various technology-related issues that other employees need assistance with</p>
+				</details>
+
+				<h2>Leadership</h2>
+				<details>
+					<summary>Sector Head @ <a href="https://gtinvestmentclub.com/" target="_blank">Investment Management Club</a></summary>
+					<i>January 2024 - present</i>
+					<p>• Directed a team of 6 analysts in designing data-driven strategies and tools for optimizing fixed income investments</p>
+					<p>• Spearheaded a machine learning initiative to predict bankruptcy risks through financial report analysis</p>
+					<p>• Pitched investment opportunities, earning the fund a 35% return in 7 months and outperforming all other sectors</p>
+				</details>
+
+				<details>
+					<summary>Vice President @ <a href="https://www.gtpkt.org/" target="_blank">Phi Kappa Theta</a></summary>
+					<i>April 2023 - April 2024</i>
+					<p>• Lead a committee of 20 people in planning 33 social events with a total budget of $50,000</p>
+					<p>• Coordinate philanthropy efforts to raise $1,700 and contribute 540 man-hours to local charities and organizations</p>
+					<p>• Maintain connections with alumni and organize alumni gatherings with a budget of over $1,000 per event</p>
+				</details>
+
+				<details>
+					<summary>Finance Chair @ <a href="https://csa.gtorg.gatech.edu/" target="_blank">Chinese Student Association</a></summary>
+					<i>August 2022 - December 2023</i>
+					<p>• Organize fundraisers that have raised over $1000 through food and drink sales to earn funds for the organization</p>
+					<p>• Submit bills and present budgets to the Student Organization Finance Office to get funding for our events</p>
+					<p>• Assist the events committee with the execution of large events that are attended by hundreds of students</p>
+				</details>
+
+				<h2>Skills</h2>
+				<p>Languages: Python, JavaScript, Java, TypeScript, C, HTML, CSS, PHP, SQL, Powershell, Tcl, C++</p>
+				<p>Frameworks: React, Node.js, Django, Next.js, Spring Boot, Angular</p>
+				<p>Libraries: NumPy, pandas, Matplotlib, Selenium, PyTorch, Scikit-Learn</p>
+				<p>Cloud Platforms: AWS, Google Cloud, Heroku, Netlify, Google Apps Script</p>
+				<p>Tools: Git, Subversion, Jira, Docker, VS Code, IntelliJ</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 720px;
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 3em 1em;
+	}
+
+	.resume {
+		width: 100%;
+	}
+
+	details {
+		margin: 1rem 0;
+		border-radius: 8px;
+		transition: background-color 0.2s ease;
+	}
+
+	details[open] {
+		background-color: rgb(var(--gray-light));
+		padding: 1rem;
+		margin: 1rem -1rem;
+	}
+
+	details summary {
+		cursor: pointer;
+		list-style: none;
+	}
+
+	details i {
+		display: block;
+		color: rgb(var(--gray));
+	}
+
+	details p {
+		margin: 0rem 0;
+	}
+
+	h2 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	strong {
+		color: rgb(var(--black));
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.resume-link {
+		text-decoration: underline;
+	}
+</style>

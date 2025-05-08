@@ -9,24 +9,24 @@
 }
 
 .profile-img {
-  width: 400px;
-  height: 400px;
+  width: min(400px, 60vw, 50vh);
+  height: min(400px, 60vw, 50vh);
   object-fit: cover;
   border-radius: 50%;
 }
 
 .name {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   width: 100%;
   max-width: 800px;
-  height: 100px;
+  height: min(100px, 20vw);
 }
 
 .name text {
   font-family: 'Modak', system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 6rem;
+  font-size: min(6rem, 15vw, 10vh);
   fill: #fff;
 }
 
@@ -34,6 +34,7 @@
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
+  padding-bottom: 15vh;
 }
 
 svg {
@@ -51,10 +52,23 @@ svg:hover path{
     stroke-width: 2;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
 .down-arrow {
   animation: bounce 2s infinite, blink 2s infinite;
-  /* Optional: for pointer feedback */
-  cursor: pointer;
+}
+
+@media (max-height: 650px) {
+  .scroll-down {
+    display: none;
+  }
 }
 
 @keyframes bounce {
@@ -80,14 +94,12 @@ svg:hover path{
   display: flex;
   justify-content: center;
   background: #fff;
-  margin: -4rem 0 0 0;
   padding: 0;
 }
 
 .about-section .prose {
   width: 720px;
   max-width: calc(100% - 2em);
-  margin: 0 auto;
   padding: 0;
 }
 
