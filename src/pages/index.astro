@@ -1,0 +1,87 @@
+---
+import '../styles/home.css';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<main class="centered-container">
+			<div id="vanta-bg" style="position:absolute; width:100%; height:100%; z-index:-1; top:0; left:0;"></div>
+			<Image src={import("../assets/myphoto.jpg")} alt="Justin Xia" class="profile-img" loading="eager" quality={100}/>
+			<h1 class="name">Justin Xia</h1>
+			<div class="icon-row">
+				<!-- Example icons, replace hrefs and SVGs as needed -->
+				<a href="https://linkedin.com/in/justinqxia" target="_blank" aria-label="LinkedIn">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>				</a>
+				<a href="https://github.com/justinqxia" target="_blank" aria-label="GitHub">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+				</a>
+				<a href="mailto:your@email.com" aria-label="Email">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M7 9L12 12.5L17 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="#000000" stroke-width="1.5"></path></svg>
+				</a>
+				<a href="blog" aria-label="Blog">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M3 20.2895V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V15C21 16.1046 20.1046 17 19 17H7.96125C7.35368 17 6.77906 17.2762 6.39951 17.7506L4.06852 20.6643C3.71421 21.1072 3 20.8567 3 20.2895Z" stroke="#000000" stroke-width="1.5"></path><path d="M10.5 10H8.5C7.94772 10 7.5 9.55228 7.5 9V8C7.5 7.44772 7.94772 7 8.5 7H9.5C10.0523 7 10.5 7.44772 10.5 8V10ZM10.5 10C10.5 11 9.5 12 8.5 13" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path><path d="M16.5 10H14.5C13.9477 10 13.5 9.55228 13.5 9V8C13.5 7.44772 13.9477 7 14.5 7H15.5C16.0523 7 16.5 7.44772 16.5 8V10ZM16.5 10C16.5 11 15.5 12 14.5 13" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
+				</a>
+				<a href="code" aria-label="Projects">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M13.5 6L10 18.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.5 8.5L3 12L6.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.5 8.5L21 12L17.5 15.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+				</a>
+				<a href="resume" aria-label="Resume">
+					<svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" color="#000000"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m 10.743752,9.2133219 c 0,0 -4.5125702,-1.1966648 -4.5125705,2.7561791 -3e-7,4.258147 4.5640215,2.715661 4.5640215,2.715661" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m 12.449181,9.1023598 c 0,0 2.137936,5.8060432 2.686032,5.8060432 0.511982,0 2.633605,-5.7961624 2.633605,-5.7961624" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+
+				</a>
+			</div>
+
+			<!-- SVG Scroll Down Button -->
+			<div class="scroll-down" style="margin-top: 2rem; cursor: pointer;" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+				<!-- Replace this with your SVG later -->
+				<svg class = "down-arrow" width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 9L12 15L18 9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			</div>
+		</main>
+
+		<!-- About Section -->
+		<section id="about" class="about-section">
+			<div class="prose">
+				<div class="title">
+					<h2>About Me</h2>
+					<hr />
+				</div>
+				<p>
+					I am currently a Master's student studying computer science at Georgia Tech. I also graduated from Georgia Tech with a Bachelor's in Computer Science, with concentrations in Intelligence and Systems & Architecture.
+				</p>
+				<p>
+					This summer, I am interning at Google in the Bay Area. I've previously worked at Union Pacific and DataPath, and I have experience with web development, low-level systems, drivers, and machine learning. Outside of class, I'm the fixed income sector head for the Investment Management Club, where I'm currently leading a team in creating a bankruptcy prediction model.
+				</p>
+				<p>
+					In my free time, I enjoy cooking, running, and watching movies.
+				</p>
+				<p>
+					I have a <a href="blog">blog</a> that I work on.
+				</p>
+			</div>
+		</section>
+
+		<Footer />
+		<script is:inline src="/three.min.js"></script>
+		<script is:inline src="/vanta.birds.min.js"></script>
+		<script>
+		declare const VANTA: any;
+		VANTA.BIRDS({
+		el: "#vanta-bg",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00
+		})
+		</script>
+	</body>
+</html>

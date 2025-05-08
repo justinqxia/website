@@ -1,0 +1,41 @@
+---
+const { code } = Astro.params;
+const errorCode = code || 404;
+const catUrl = `https://http.cat/${errorCode}.jpg`;
+---
+
+<html lang="en">
+  <head>
+    <title>Error {errorCode}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #222;
+        color: #fff;
+        font-family: sans-serif;
+      }
+      img {
+        max-width: 90vw;
+        max-height: 60vh;
+        border-radius: 16px;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+        margin-bottom: 2rem;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Error {errorCode}</h1>
+    <img src={catUrl} alt={`HTTP Cat for error ${errorCode}`} />
+    <p>Sorry, something went wrong.</p>
+    <a href="/" style="color: #fff; text-decoration: underline;">Go Home</a>
+  </body>
+</html>
