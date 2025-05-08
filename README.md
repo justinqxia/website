@@ -24,9 +24,15 @@ npm run build
 npm run preview
 ```
 
-## License
+## Licensing
 
-All rights reserved. This is a personal website and its contents are not licensed for public use.
+### Code
+The code used to build and display this website, including HTML templates, CSS stylesheets, JavaScript files, and any build scripts or configuration files, is licensed under the MIT License. You can find a copy of the license in the [LICENSE](LICENSE) file in this repository.
+
+### Content
+All textual and visual content, including but not limited to blog posts, articles, essays, tutorials, and images, **even if stored within this repository (e.g., in directories like `/posts/`, `/articles/`, `/content/`, or as Markdown files), is copyrighted by Justin Xia and is NOT licensed under the MIT License.**
+
+All rights are reserved for this content unless explicitly stated otherwise on a specific piece of content itself or on the website where it is displayed. For usage permissions regarding the content, please refer to the copyright notice on the website or contact me for clarification.
 
 ## Contact
 
