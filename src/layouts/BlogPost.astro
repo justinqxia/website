@@ -4,10 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import ReadingTime from '../components/ReadingTime.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate } = Astro.props;
+const content = await Astro.slots.render('default');
 ---
 
 <html lang="en">
@@ -42,6 +44,18 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.meta {
+				display: flex;
+				justify-content: center;
+				gap: 0.5em;
+				align-items: center;
+				flex-wrap: wrap;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.separator {
+				color: rgb(var(--gray));
+			}
 		</style>
 	</head>
 
@@ -51,17 +65,12 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 			<article>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
 						<h1>{title}</h1>
+						<div class="meta">
+							<FormattedDate date={pubDate} />
+							<span class="separator">|</span>
+							<ReadingTime content={content} />
+						</div>
 						<hr />
 					</div>
 					<slot />

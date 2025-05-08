@@ -1,0 +1,16 @@
+---
+interface Props {
+	content: string;
+}
+
+const { content } = Astro.props;
+
+// Average reading speed (words per minute)
+const WORDS_PER_MINUTE = 200;
+
+// Calculate reading time
+const wordCount = content.split(/\s+/).length;
+const readingTime = Math.ceil(wordCount / WORDS_PER_MINUTE);
+---
+
+{readingTime} min read 

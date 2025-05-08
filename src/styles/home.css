@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
 .centered-container {
   min-height: 100vh;
   display: flex;
@@ -15,9 +17,17 @@
 
 .name {
   margin-top: 1.5rem;
-  font-size: 4rem;
-  color: #fff;
-  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+}
+
+.name text {
+  font-family: 'Modak', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6rem;
+  fill: #fff;
 }
 
 .icon-row {
