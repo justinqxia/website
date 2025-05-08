@@ -14,7 +14,19 @@ import { Image } from 'astro:assets';
 	<body>
 		<main class="centered-container">
 			<div id="vanta-bg" style="position:absolute; width:100%; height:100%; z-index:-1; top:0; left:0;"></div>
-			<Image src={import("../assets/myphoto.jpg")} alt="Justin Xia" class="profile-img" loading="eager" quality={100}/>
+			<Image 
+				src={import("../assets/myphoto.jpg")} 
+				alt="Justin Xia" 
+				class="profile-img" 
+				width={400}
+				height={400}
+				sizes="(max-width: 768px) 60vw, 400px"
+				densities={[1, 2]}
+				format="avif"
+				quality={100}
+				loading="eager"
+				decoding="async"
+			/>
 			<svg class="name" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
 				<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Justin Xia</text>
 			</svg>
