@@ -1,8 +1,12 @@
 {
     "activities": [
         {
-            "text": "Nothing",
+            "text": "Open this website",
             "duration": 0
+        },
+        {
+            "text": "Solve Two Sum",
+            "duration": 12000
         },
         {
             "text": "Swim 50 yards",
@@ -17,8 +21,20 @@
             "duration": 55000
         },
         {
-            "text": "Run a mile",
-            "duration": 345000
+            "text": "Sing 'Love is an Open Door'",
+            "duration": 126000
+        },
+        {
+            "text": "Run across the Georgia Tech campus",
+            "duration": 287000
+        },
+        {
+            "text": "Run a 5K",
+            "duration": 1349000
+        },
+        {
+            "text": "Watch the movie 'Cars'",
+            "duration": 7020000
         }
     ]
 } 

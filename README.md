@@ -2,6 +2,17 @@
 
 My personal website and blog. Built with Astro, deployed with Cloudflare Pages.
 
+## Features
+- Home page with icons for links and pages
+- Dates and read times for blog posts
+- Expandable details on resume page
+- Counter of time spent on the website in the footer
+
+## Next Steps
+- Adjust font/color
+- Add dark mode
+- Add project page
+
 ## Development
 
 ```bash
